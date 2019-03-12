@@ -20,7 +20,10 @@ df7 = pd.read_csv('../pokemon_w7.csv')
 
 df = df7.merge(df6, how='outer', left_on='name', right_on='name' + '_g6')
 
+df.to_json('pokemon7.json')
 
-conn = sl.connect('pokemon7.sqlite3')
+df.to_csv('pokemon7.csv')
 
-df.to_sql('pokemon', conn)
+#conn = sl.connect('pokemon7.sqlite3')
+
+#df.to_sql('pokemon', conn)
