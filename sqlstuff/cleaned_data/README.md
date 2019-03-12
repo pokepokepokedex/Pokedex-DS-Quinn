@@ -13,4 +13,4 @@
 
 `pokedex_num` was formally called `#`
 
-
+There's a lot of other useful stuff in here, 40-ish features feel free to explore
