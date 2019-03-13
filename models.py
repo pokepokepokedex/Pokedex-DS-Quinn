@@ -2,6 +2,27 @@ import sqlite3 as sl
 import pandas as pd  # type: ignore
 
 
+COLORS_by_TYPE = {
+    'fire': 'red',
+    'water': '#09E1FF',
+    'normal': '#1DFDA8',
+    'poison': '#B918FF',
+    'electric': 'yellow',
+    'ground': '#FF9C15',
+    'fairy': '#FF69B4',
+    'grass': '#34FF5C',
+    'bug': '#90EE38',
+    'psychic': '#B71ECF',
+    'rock': '#DCB883',
+    'fighting': '#FF3A17',
+    'ghost': '#6817ff',
+    'ice': '#52fffa',
+    'dragon': '#a533ff',
+    'dark': '#3D009C',
+    'flying': '#4da1ff',
+    'steel': '#bfbfbf'}
+
+
 def clean_lite_6(datf: pd.DataFrame) -> pd.DataFrame:
     return (datf.fillna('')
             .assign(Legendary=[1 if x else 0 for x in datf.Legendary],
