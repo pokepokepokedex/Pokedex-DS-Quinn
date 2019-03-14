@@ -35,9 +35,14 @@ def clean_lite_6(datf: pd.DataFrame) -> pd.DataFrame:
             )
 
 
+def clean_7(datf: pd.DataFrame) -> pd.DataFrame:
+    '''we need to renamed `against_fight` to `against_fighting`'''
+    return datf
+
+
 df6 = pd.read_csv('Pokemon.csv').pipe(clean_lite_6)
 
-df7 = pd.read_csv('pokemon_w7.csv')
+df7 = pd.read_csv('pokemon_w7.csv').pipe(clean_7)
 
 df = df7.merge(df6, how='outer', left_on='name', right_on='name' + '_g6')
 

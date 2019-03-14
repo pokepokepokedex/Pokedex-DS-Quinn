@@ -9,6 +9,7 @@ verify_ssl = true
 pandas = "*"
 numpy = "*"
 sqlalchemy = "*"
+selenium = "*"
 
 [requires]
 python_version = "3.6"
